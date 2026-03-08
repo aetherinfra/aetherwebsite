@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether WebOS | Bare-Metal ARMv8 Infrastructure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo-link">
+                <img src="aether.png" alt="Aether" class="nav-logo-img">
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="webos.html" style="color: var(--accent-glow);">WebOS</a></li>
+                <li><a href="edgecloud.html">EdgeCloud</a></li>
+                <li><a href="grim.html">Grim</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+            
+            <a href="https://github.com/aetherinfra/aetherwebos" class="github-btn">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="carousel-container">
+                <div class="carousel-slide active" style="background-image: url('aetherwebos3.png');"></div>
+                <div class="carousel-slide" style="background-image: url('aetherwebos2.png');"></div>
+                <div class="carousel-slide" style="background-image: url('Screenshot\ 2026-02-09\ 142352.png');"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Aether WebOS</h1>
+                <p>Bare-Metal Excellence for AArch64 ARMv8 Infrastructure</p>
+                <br><br>
+                <a href="https://github.com/aetherinfra/aetherwebos" class="btn btn-primary">Source Code</a>
+            </div>
+        </section>
+
+        <section class="project-row">
+            <div class="project-image-container">
+                <div class="project-image-placeholder">
+                    <img src="Screenshot 2026-03-08 201554.png" alt="AArch64 ARMv8 Architecture Diagram">
+                </div>
+            </div>
+            <div class="project-text">
+                <h2>ARMv8 AArch64 Architecture</h2>
+                <p>Designed specifically for the next generation of ARM servers. Aether WebOS features direct hardware interaction, including:</p>
+                <ul style="list-style: none; color: var(--text-dim); margin-bottom: 2rem;">
+                    <li>• Exception Level (EL) management</li>
+                    <li>• GICv2/v3 Interrupt handling</li>
+                    <li>• Stage 1 MMU translation</li>
+                    <li>• Generic Timer initialization</li>
+                </ul>
+                <a href="#" class="btn btn-primary">View Docs</a>
+            </div>
+        </section>
+
+        <section class="project-row reverse" style="background: rgba(123, 44, 191, 0.02);">
+            <div class="project-image-container">
+                <div class="project-image-placeholder">
+                    <img src="aetherwebos3.png" alt="Headless UART Operations">
+                </div>
+            </div>
+            <div class="project-text">
+                <h2>Headless UART Support</h2>
+                <p>Precision debugging and administration via high-speed UART serial interfaces. Built for data centers where local display output isn't an option.</p>
+                <ul style="list-style: none; color: var(--text-dim); margin-bottom: 2rem;">
+                    <li>• Real-time kernel log streaming</li>
+                    <li>• Interactive PL011 UART shell</li>
+                    <li>• Zero-overhead debug prints</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="project-row">
+            <div class="project-image-container">
+                <div class="project-image-placeholder">
+                    <img src="certificate-preview.png" alt="Contribution Rewards">
+                </div>
+            </div>
+            <div class="project-text">
+                <h2>Contribute & Get Certified</h2>
+                <p>Aether WebOS is an open-source research initiative. We value every pull request—from kernel bug fixes to networking stack optimizations.</p>
+                <div style="background: var(--bg-card); padding: 1.5rem; border-left: 4px solid var(--accent-purple); margin-bottom: 2rem; margin-top: 10px;">
+                    <p style="font-size: 0.95rem; font-style: italic;">
+                        Contributors receive an official Certificate of Appreciation from Aether Infra and the Core-Maintainers team to highlight their work in open-source systems.
+                    </p>
+                </div>
+                <a href="contribute.html" class="btn btn-primary">Contribution Guide</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: var(--accent-glow); margin-bottom: 1rem; font-family: 'IBM Plex Mono', monospace;">Aether Data Systems</h3>
+                <p style="color: var(--text-dim); max-width: 400px; font-size: 0.95rem;">
+                    Developing the next generation of open-source bare-metal systems and distributed edge infrastructure.
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 4rem;">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-list">
+                        <li><a href="webos.html">WebOS</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="https://github.com/aetherinfra/aetherwebos">GitHub</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 AETHER INFRASTRUCTURE PROJECT. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+
+        // Carousel Logic
+        const slides = document.querySelectorAll('.carousel-slide');
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+</html>

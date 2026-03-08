@@ -11,15 +11,23 @@
     <header>
         <nav>
             <a href="index.html" class="nav-logo-link">
-                <img src="aether.png" alt="Aether" class="nav-logo-img" style="width: 200px">
+                <img src="aether.png" alt="Aether" class="nav-logo-img">
             </a>
-            <ul class="nav-links">
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-list">
                 <li><a href="webos.html">WebOS</a></li>
                 <li><a href="edgecloud.html">EdgeCloud</a></li>
                 <li><a href="grim.html">Grim</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="contribute.html">Contribute</a></li>
             </ul>
+            
             <a href="https://github.com/aetherinfra/aetherwebos" class="github-btn">GitHub</a>
         </nav>
     </header>
@@ -32,7 +40,7 @@
                 <div class="carousel-slide" style="background-image: url('aetherwebos2.png');"></div>
             </div>
             <div class="hero-content">
-                <h1>Aether</h1>
+                <h1>Aether.</h1>
                 <p style="color:var(--text-dim); font-size:1.2rem; font-family: 'IBM Plex Mono', monospace; letter-spacing: 2px;">OPEN INFRASTRUCTURE SYSTEMS BUILT FROM FIRST PRINCIPLES</p>
                 <br><br>
                 <a href="#explore" class="btn btn-primary">EXPLORE PROJECTS</a>
@@ -49,7 +57,7 @@
                 </div>
                 <div class="project-text">
                     <h2>Aether WebOS</h2>
-                    <p>A custom bare-metal operating system for AArch64. Featuring a ground-up kernel, VirtIO networking, and a built-in Web UI system for system management.</p>
+                    <p>A custom bare-metal operating system for AArch64 servers. Featuring a ground-up kernel, VirtIO networking, and a built-in Web UI system for system management.</p>
                     <a href="webos.html" class="btn btn-primary">View WebOS</a>
                 </div>
             </section>
@@ -153,6 +161,22 @@
             current = (current + 1) % slides.length;
             slides[current].classList.add('active');
         }, 5000);
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navList.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
