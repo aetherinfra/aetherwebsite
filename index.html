@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether | Infrastructure Research</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo-link">
+                <img src="aether.png" alt="Aether" class="nav-logo-img" style="width: 200px">
+            </a>
+            <ul class="nav-links">
+                <li><a href="webos.html">WebOS</a></li>
+                <li><a href="edgecloud.html">EdgeCloud</a></li>
+                <li><a href="grim.html">Grim</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+            <a href="https://github.com/aetherinfra/aetherwebos" class="github-btn">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="carousel-container" id="hero-carousel">
+                <div class="carousel-slide active" style="background-image: url('aetherwebos3.png');"></div>
+                <div class="carousel-slide" style="background-image: url('edgecloud.png');"></div>
+                <div class="carousel-slide" style="background-image: url('aetherwebos2.png');"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Aether</h1>
+                <p style="color:var(--text-dim); font-size:1.2rem; font-family: 'IBM Plex Mono', monospace; letter-spacing: 2px;">OPEN INFRASTRUCTURE SYSTEMS BUILT FROM FIRST PRINCIPLES</p>
+                <br><br>
+                <a href="#explore" class="btn btn-primary">EXPLORE PROJECTS</a>
+            </div>
+        </section>
+
+        <div id="explore" class="project-row-container">
+            
+            <section class="project-row">
+                <div class="project-image-container">
+                    <div class="project-image-placeholder">
+                        <img src="aetherwebos3.png" alt="Aether WebOS Interface">
+                    </div>
+                </div>
+                <div class="project-text">
+                    <h2>Aether WebOS</h2>
+                    <p>A custom bare-metal operating system for AArch64. Featuring a ground-up kernel, VirtIO networking, and a built-in Web UI system for system management.</p>
+                    <a href="webos.html" class="btn btn-primary">View WebOS</a>
+                </div>
+            </section>
+
+            <section class="project-row reverse" style="background: rgba(123, 44, 191, 0.02);">
+                <div class="project-image-container">
+                    <div class="project-image-placeholder">
+                        <img src="edgecloud.png" alt="EdgeCloud Architecture">
+                    </div>
+                </div>
+                <div class="project-text">
+                    <h2>EdgeCloud</h2>
+                    <p>Experimental distributed compute framework designed for ARM-based edge nodes. Optimized for AI workloads and localized infrastructure clusters.</p>
+                    <a href="edgecloud.html" class="btn btn-primary">View EdgeCloud</a>
+                </div>
+            </section>
+
+            <section class="project-row">
+                <div class="project-image-container">
+                    <div class="project-image-placeholder">
+                        <img src="grim.png" alt="Grim OS Desktop">
+                    </div>
+                </div>
+                <div class="project-text">
+                    <h2>Grim OS</h2>
+                    <p>An x86-64 Server Platform OS written in Rust (no-std). Exploring the future of runtime environments with a dedicated GUI and native driver support.</p>
+                    <a href="grim.html" class="btn btn-primary">View Grim</a>
+                </div>
+            </section>
+        </div>
+
+        <section class="membership-section">
+            <div style="max-width: 1200px; margin:0 auto; padding: 0 2rem; text-align:center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Community & Support</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    
+                    <div style="background: var(--bg-card); padding: 3rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h3>Insider</h3>
+                        <p style="margin: 1rem 0; color: var(--text-dim);">Early access to builds and research documentation.</p>
+                        <h2 style="color: var(--accent-glow); margin-bottom: 2rem;">₹20/mo</h2>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">JOIN TIER</a>
+                    </div>
+
+                    <div style="background: var(--bg-card); padding: 3rem; border-radius: 12px; border: 2px solid var(--accent-purple); transform: scale(1.05);">
+                        <h3>Insider+</h3>
+                        <p style="margin: 1rem 0; color: var(--text-dim);">Priority architectural input and hardware node access.</p>
+                        <h2 style="color: var(--accent-glow); margin-bottom: 2rem;">₹50/mo</h2>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">JOIN TIER</a>
+                    </div>
+
+                    <div style="background: var(--bg-card); padding: 3rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h3>Support Us</h3>
+                        <p style="margin: 1rem 0; color: var(--text-dim);">One-time contributions via UPI.</p>
+                        <h2 style="color: var(--accent-glow); margin-bottom: 2rem;">Anything you wish</h2>
+                        <a href="#" class="btn btn-primary" style="width: 100%;">CONTRIBUTE</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: var(--accent-glow); margin-bottom: 1rem; font-family: 'IBM Plex Mono', monospace;">Aether Data Systems</h3>
+                <p style="color: var(--text-dim); max-width: 400px; font-size: 0.95rem;">
+                    Developing the next generation of open-source bare-metal systems and distributed edge infrastructure.
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 4rem;">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-list">
+                        <li><a href="webos.html">WebOS</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="https://github.com/aetherinfra/aetherwebos">GitHub</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 AETHER INFRASTRUCTURE PROJECT. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+</html>
