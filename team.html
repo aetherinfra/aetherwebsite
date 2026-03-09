@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Aether Core Maintainers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Team-Specific Styles */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 4rem;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(123, 44, 191, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            padding: 2.5rem;
+        }
+
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-purple);
+            opacity: 0.5;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-glow);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-card:hover::before {
+            background: var(--accent-glow);
+            opacity: 1;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background: #1a1c3a;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-purple);
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: bold;
+            color: var(--accent-glow);
+        }
+
+        .profile-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .profile-card .role {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .profile-card p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo-link">
+                <img src="aether.png" alt="Aether" class="nav-logo-img">
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="webos.html">WebOS</a></li>
+                <li><a href="edgecloud.html">EdgeCloud</a></li>
+                <li><a href="grim.html">Grim</a></li>
+                <li><a href="team.html" style="color: var(--accent-glow);">Team</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+            
+            <a href="https://github.com/aetherinfra/aetherwebos" class="github-btn">GitHub</a>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 150px; padding-bottom: 100px;">
+        
+        <div class="team-intro">
+            <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem;">The Core Maintainers</h1>
+            <p style="color: var(--text-dim); font-size: 1.1rem;">
+                Aether is driven by a specialized team of systems architects and low-level engineers. We are responsible for reviewing pull requests, managing the technical roadmap, and ensuring the architectural integrity of the Aether ecosystem.
+            </p>
+        </div>
+
+        <div class="team-grid">
+            
+            <div class="profile-card">
+                <div class="profile-img">AS</div>
+                <h3>Aritrash Sarkar</h3>
+                <span class="role">Project Lead / Kernel Architect</span>
+                <p>Oversees the high-level architecture of Aether WebOS and the core execution model of the kernel.</p>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-img">AG</div>
+                <h3>Adrija Ghosh</h3>
+                <span class="role">Memory Mapping Architect</span>
+                <p>Focuses on MMU initialization, page table management, and efficient virtual-to-physical address translation.</p>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-img">AD</div>
+                <h3>Ankana Debnath</h3>
+                <span class="role">Health & UI/UX Architect</span>
+                <p>Designs system monitoring tools and the Web UI system, bridging low-level data with intuitive interfaces.</p>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-img">PM</div>
+                <h3>Pritam Mondal</h3>
+                <span class="role">Driver Architect</span>
+                <p>Responsible for hardware abstraction layers and xHCI device enumeration logic within the WebOS ecosystem.</p>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-img">RP</div>
+                <h3>Roheet Purkayastha</h3>
+                <span class="role">Driver Architect</span>
+                <p>Develops VirtIO drivers and high-speed network interface controllers for ARMv8 infrastructure nodes.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: var(--accent-glow); margin-bottom: 1rem; font-family: 'IBM Plex Mono', monospace;">Aether Data Systems</h3>
+                <p style="color: var(--text-dim); max-width: 400px; font-size: 0.95rem;">
+                    Developing the next generation of open-source bare-metal systems and distributed edge infrastructure.
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 4rem;">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-list">
+                        <li><a href="webos.html">WebOS</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="https://github.com/aetherinfra/aetherwebos">GitHub</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 AETHER INFRASTRUCTURE PROJECT. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle logic
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute | Aether Infrastructure Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contribute-section { 
+            padding: 4rem 0; 
+            border-bottom: 1px solid rgba(123, 44, 191, 0.1); 
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .rules-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+        }
+
+        .step-list { 
+            list-style: none; 
+            counter-reset: step-counter; 
+        }
+
+        .step-list li { 
+            position: relative; 
+            padding-left: 3rem; 
+            margin-bottom: 2rem; 
+            color: var(--text-dim); 
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute; left: 0; top: 0;
+            width: 35px; height: 35px;
+            background: var(--accent-purple);
+            color: #fff; border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'IBM Plex Mono'; font-weight: bold;
+        }
+
+        .info-box { 
+            background: var(--bg-card); 
+            padding: 2rem; 
+            border-radius: 8px; 
+            border-left: 4px solid var(--accent-glow); 
+            margin-top: 2rem; 
+        }
+        
+        /* Membership Cards */
+        .membership-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 3rem; 
+        }
+
+        .price-tag { 
+            font-size: 2.5rem; 
+            color: #fff; 
+            margin: 1rem 0; 
+            font-family: 'IBM Plex Mono'; 
+        }
+
+        .price-tag span { 
+            font-size: 1rem; 
+            color: var(--text-dim); 
+        }
+
+        @media (max-width: 768px) { .rules-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo-link">
+                <img src="aether.png" alt="Aether" class="nav-logo-img">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="webos.html">WebOS</a></li>
+                <li><a href="edgecloud.html">EdgeCloud</a></li>
+                <li><a href="grim.html">Grim</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contribute.html" style="color: var(--accent-glow);">Contribute</a></li>
+            </ul>
+            <a href="https://github.com/aetherinfra/aetherwebos" class="github-btn">GitHub</a>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 120px;">
+        
+        <section style="text-align: center; margin-bottom: 5rem;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Join the Evolution</h1>
+            <p style="color: var(--text-dim); max-width: 700px; margin: 0 auto;">Help us build the next generation of bare-metal infrastructure. From kernel architecture to UI design, every contribution matters.</p>
+        </section>
+
+        <section class="contribute-section">
+            <div class="rules-grid">
+                <div>
+                    <h2 style="color: var(--accent-glow); margin-bottom: 1.5rem;">Contribution Workflow</h2>
+                    <ul class="step-list">
+                        <li><strong>Fork & Clone:</strong> Create a personal fork of the Aether WebOS repository and clone it to your local AArch64 development environment.</li>
+                        <li><strong>Feature Branch:</strong> Always create a new branch for your feature or bugfix (e.g., <code>feat/virtio-net</code>).</li>
+                        <li><strong>Atomic Commits:</strong> Ensure your commits are small, descriptive, and follow our naming conventions.</li>
+                        <li><strong>Pull Request:</strong> Submit your PR to the <code>main</code> branch. The Core Maintainers will review your code for architectural alignment.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 style="color: var(--accent-glow); margin-bottom: 1.5rem;">Rules & Code of Conduct</h2>
+                    <p style="color: var(--text-dim); margin-bottom: 1rem;">To maintain a professional research environment, all contributors must adhere to:</p>
+                    <ul style="color: var(--text-dim); padding-left: 1.5rem; line-height: 2;">
+                        <li>Technical excellence and code safety.</li>
+                        <li>Respectful communication in PR comments and Issues.</li>
+                        <li>No plagiarism; all code must be original or appropriately licensed (GPL/MIT).</li>
+                        <li>Maintain the "Bare Metal" philosophy—minimal dependencies.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contribute-section">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Contributor Recognition</h2>
+            <div class="info-box">
+                <h3 style="margin-bottom: 1rem; color: #fff;">Certificate of Appreciation</h3>
+                <p>Every successful contributor whose code is merged into the Aether ecosystem will receive a digital <strong>Certificate of Appreciation</strong> signed by the Core Maintainers. This certificate serves as official proof of your contribution to low-level systems engineering and can be used in professional portfolios and resumes.</p>
+            </div>
+        </section>
+
+        <section class="contribute-section">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Support the Infrastructure</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-bottom: 3rem;">Supporting Aether helps us maintain build servers and ARMv8 test hardware.</p>
+            
+            <div class="membership-grid">
+                <div class="card" style="text-align: center; padding: 3rem;">
+                    <h3 style="letter-spacing: 2px;">INSIDER</h3>
+                    <div class="price-tag">₹20<span>/mo</span></div>
+                    <ul style="list-style: none; color: var(--text-dim); margin-bottom: 2rem; font-size: 0.9rem;">
+                        <li>Access to Developer Discord</li>
+                        <li>Early Research Pre-prints</li>
+                        <li>Insider Badge on GitHub</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Subscribe</a>
+                </div>
+
+                <div class="card" style="text-align: center; padding: 3rem; border: 2px solid var(--accent-glow); transform: scale(1.05); background: #0c0e25;">
+                    <h3 style="letter-spacing: 2px; color: var(--accent-glow);">INSIDER+</h3>
+                    <div class="price-tag">₹50<span>/mo</span></div>
+                    <ul style="list-style: none; color: var(--text-dim); margin-bottom: 2rem; font-size: 0.9rem;">
+                        <li>All Insider Benefits</li>
+                        <li>Priority Architecture Voting</li>
+                        <li>Direct Q&A with Lead Architects</li>
+                        <li>Monthly Dev-Log Newsletter</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Subscribe</a>
+                </div>
+
+                <div class="card" style="text-align: center; padding: 3rem;">
+                    <h3 style="letter-spacing: 2px;">DONATE</h3>
+                    <p style="color: var(--text-dim); margin: 1.5rem 0;">Small one-time contributions via UPI.</p>
+                    <img src="upiid.jpeg" alt="UPI QR Code" style="width: 150px; margin-bottom: 1rem;">
+                    <p style="margin-top: 1rem; font-family: 'IBM Plex Mono'; font-size: 0.8rem;">aritrashsarkar2@oksbi</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contribute-section" style="border-bottom: none;">
+            <div style="background: rgba(123, 44, 191, 0.05); padding: 3rem; border-radius: 12px;">
+                <h2 style="margin-bottom: 1.5rem;">Privacy & Security</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; font-size: 0.9rem; color: var(--text-dim);">
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 0.5rem;">Contributor Data</h4>
+                        <p>We only collect your name and email for the purpose of issuing contribution certificates. Your data will never be sold or shared with third parties.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 0.5rem;">Vulnerability Reporting</h4>
+                        <p>If you discover a security flaw in Aether WebOS, please report it via private message to the Core Maintainers rather than opening a public issue immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: var(--accent-glow); margin-bottom: 1rem; font-family: 'IBM Plex Mono', monospace;">Aether Data Systems</h3>
+                <p style="color: var(--text-dim); max-width: 400px; font-size: 0.95rem;">Developing the next generation of open-source bare-metal systems and distributed edge infrastructure.</p>
+            </div>
+            <div style="display: flex; gap: 4rem;">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-list">
+                        <li><a href="webos.html">WebOS</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="https://github.com/aetherinfra/aetherwebos">GitHub</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 AETHER INFRASTRUCTURE PROJECT. ALL RIGHTS RESERVED.</div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

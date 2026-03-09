@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Segmentation Fault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo-link">
+                <img src="aether.png" alt="Aether" class="nav-logo-img">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="webos.html">WebOS</a></li>
+                <li><a href="edgecloud.html">EdgeCloud</a></li>
+                <li><a href="grim.html">Grim</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div>
+            <h1 style="font-size: clamp(4rem, 15vw, 8rem); margin-bottom: 0; color: var(--accent-glow); opacity: 0.8; margin-top: 100px;">404</h1>
+            <h2 style="font-family: 'IBM Plex Mono'; letter-spacing: 4px; margin-bottom: 2rem;">SEGMENTATION FAULT</h2>
+            
+            <div style="background: rgba(123, 44, 191, 0.1); border: 1px solid rgba(123, 44, 191, 0.3); padding: 2rem; border-radius: 8px; max-width: 500px; margin: 0 auto 3rem;">
+                <p style="font-family: 'IBM Plex Mono'; font-size: 0.9rem; color: var(--text-dim); text-align: left;">
+                    <span style="color: #ff4d4d;">[ERROR]</span> Page Table Miss at 0x00000000<br>
+                    <span style="color: var(--accent-glow);">[INFO]</span> Requested resource is outside the accessible memory space.<br>
+                    <span style="color: var(--accent-glow);">[INFO]</span> Stack trace: page_not_found.asm:line_404
+                </p>
+            </div>
+
+            <a href="index.html" class="btn btn-primary">Return to Main Cluster</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom" style="border-top: none;">
+            &copy; 2026 AETHER INFRASTRUCTURE PROJECT. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
