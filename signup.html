@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Aether Insider Program</title>
+    <link rel="icon" type="image/png" href="aether.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .signup-container {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            margin-top: 100px;
+        }
+
+        .signup-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(123, 44, 191, 0.3);
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .terminal-header {
+            font-family: 'IBM Plex Mono', monospace;
+            color: var(--accent-glow);
+            font-size: 0.8rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .signup-card h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .signup-card p {
+            color: var(--text-dim);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .mail-btn {
+            display: inline-block;
+            background: var(--accent-purple);
+            color: #fff;
+            padding: 1.2rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid var(--accent-purple);
+        }
+
+        .mail-btn:hover {
+            background: var(--accent-glow);
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .note {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #444;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        .secondary-link {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-decoration: none;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .secondary-link:hover { color: var(--accent-glow); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo-link">
+                <img src="aether.png" alt="Aether" class="nav-logo-img">
+            </a>
+            <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="webos.html">WebOS</a></li>
+                <li><a href="edgecloud.html">EdgeCloud</a></li>
+                <li><a href="grim.html">Grim</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+
+            <a href="https://github.com/aetherinfra/aetherwebos" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="github-btn">
+                GitHub
+            </a>
+        </nav>
+    </header>
+
+    <main class="signup-container">
+        <div class="signup-card">
+            <div class="terminal-header">[ MEMBERSHIP ENROLLMENT v1.1 ]</div>
+            
+            <h1>Join the Insiders</h1>
+            <p>
+                To join the Aether Insider or Insider+ program, please initialize a request. 
+                This will open a pre-formatted message in Gmail.
+            </p>
+
+            <div class="btn-group">
+                <button onclick="openGmail()" class="mail-btn" style="cursor: pointer; border: none;">
+                    INITIALIZE VIA GMAIL
+                </button>
+
+                <a href="mailto:members@aetherinfra.org?subject=Enrollment" class="secondary-link">
+                    Use default mail client (Outlook/Mail)
+                </a>
+            </div>
+
+            <div class="note">
+                MANUAL HANDSHAKE REQUIRED FOR ONBOARDING
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom" style="border-top: none;">
+            &copy; 2026 AETHER INFRASTRUCTURE PROJECT. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        function openGmail() {
+            const recipient = "astaepsilongroup@gmail.com";
+            const subject = encodeURIComponent("Aether Insider Program Enrollment");
+            const body = encodeURIComponent("Hello Aether Team,\n\nI am interested in joining the Aether Insider Program.\n\nPlease provide me with the next steps regarding the membership (Insider / Insider+) and contribution details.\n\nThank you!");
+            
+            // This specific URL format forces the Gmail Web Interface
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+            
+            window.open(gmailUrl, '_blank');
+        }
+
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
